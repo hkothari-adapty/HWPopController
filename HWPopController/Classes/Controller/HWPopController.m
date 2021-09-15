@@ -299,7 +299,7 @@ static NSMutableSet *_retainedPopControllers;
     CGAffineTransform lastTransform = self.containerView.transform;
     self.containerView.transform = CGAffineTransformIdentity;
 
-    self.backgroundView.frame = self.containerViewController.view.bounds;
+    self.backgroundView.frame = UIScreen.mainScreen.bounds; //self.containerViewController.view.bounds;
 
     CGSize contentSizeOfTopView = [self contentSizeOfTopView];
     CGFloat containerViewWidth = contentSizeOfTopView.width;
